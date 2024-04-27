@@ -263,6 +263,7 @@ namespace Visualization.UI
             PanelInteractiveIntro.SetActive(false);
             
             PanelMethod.SetActive(true);
+            scrollableMethodListSourceCodeEdit.CurrentState = EditModeState.Instance;
             scrollableMethodListSourceCodeEdit.FillItems(selectedClass.Methods.Select(method => method.Name).ToList());
 
             PanelInteractiveIntro.SetActive(false);
@@ -444,10 +445,10 @@ namespace Visualization.UI
 
             Class selectedClass = DiagramPool.Instance.ClassDiagram.FindClassByName(name).ParsedClass;
             animMethods = AnimationData.Instance.selectedAnim.GetMethodsByClassName(name);
-            
+            scrollableMethodListAnimationPlay.CurrentState = PlayModeState.Instance;
             if(animMethods != null)
             {
-                scrollableMethodListAnimationPlay.FillItems(animMethods.Select(method => method.Name).ToList(), false);
+                scrollableMethodListAnimationPlay.FillItems(animMethods.Select(method => method.Name).ToList());
             }
             else
             {

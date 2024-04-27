@@ -725,6 +725,10 @@ MonoBehaviour:
     m_Localized: "Pre objekt sa pou\u017Eije default hodnota!"
     m_Metadata:
       m_Items: []
+  - m_Id: 53906103811616768
+    m_Localized: "Katal\xF3g vzorov"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
