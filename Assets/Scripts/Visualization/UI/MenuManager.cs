@@ -679,7 +679,7 @@ namespace Visualization.UI
                state = HighlightFillState.GetInstance(); 
             }
 
-            Animation.Animation.Instance.SetEdgeHighlighter(state);
+            Animation.Animation.Instance.SetEdgeHighlighterState(state);
         }
 
         public static void SetAnimationButtonsActive(bool active)

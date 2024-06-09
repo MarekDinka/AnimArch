@@ -31,7 +31,7 @@ namespace Visualization.Animation
         public Color methodColor;
         public Color relationColor;
         public GameObject LineFill;
-        public HighlightEdgeState edgeHighlighter;
+        public HighlightEdgeState edgeHighlighterState;
         [HideInInspector] public bool AnimationIsRunning = false;
         [HideInInspector] public bool isPaused = false;
         [HideInInspector] public bool standardPlayMode = true;
@@ -57,7 +57,7 @@ namespace Visualization.Animation
             classDiagram = GameObject.Find("ClassDiagram").GetComponent<ClassDiagram.Diagrams.ClassDiagram>();
             objectDiagram = GameObject.Find("ObjectDiagram").GetComponent<ObjectDiagram>();
             standardPlayMode = true;
-            edgeHighlighter = HighlightImmediateState.GetInstance();
+            edgeHighlighterState = HighlightImmediateState.GetInstance();
         }
 
         private void ParseAnimationMethods()
@@ -730,14 +730,14 @@ namespace Visualization.Animation
             prevStep = true;
         }
 
-        public void SetEdgeHighlighter(HighlightEdgeState newState)
+        public void SetEdgeHighlighterState(HighlightEdgeState newState)
         {
-            edgeHighlighter = newState; 
+            edgeHighlighterState = newState; 
         }
 
-        public HighlightEdgeState GetEdgeHighlighter()
+        public HighlightEdgeState GetEdgeHighlighterState()
         {
-            return edgeHighlighter;
+            return edgeHighlighterState;
         }
     }
 }

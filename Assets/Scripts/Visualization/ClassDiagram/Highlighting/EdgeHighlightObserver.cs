@@ -20,7 +20,7 @@ public class EdgeHighlightObserver : HighlightObserver
 
             if (s.HighlightInt == 1)
             {
-                a.GetEdgeHighlighter().Highligt(s.InvocationInfo);
+                a.GetEdgeHighlighterState().Highligt(s.InvocationInfo);
             }
             else if (s.HighlightInt == 0)
             {
